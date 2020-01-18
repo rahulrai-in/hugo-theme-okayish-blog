@@ -1,0 +1,23 @@
+{
+  "name": "hugo-theme-okayish-blog",
+  "version": "1.0.0",
+  "description": "Ok-ish blog theme for Hugo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kongdivin/hugo-theme-okayish-blog.git"
+  },
+  "keywords": [
+    "theme",
+    "hugo",
+    "blog"
+  ],
+  "author": "Divin Kong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kongdivin/hugo-theme-okayish-blog/issues"
+  },
+  "homepage": "https://github.com/kongdivin/hugo-theme-okayish-blog#readme",
+  "devDependencies": {
+    "vanilla-framework": "^2.5.0"
+  }
+}

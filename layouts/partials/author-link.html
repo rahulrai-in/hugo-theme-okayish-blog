@@ -1,0 +1,13 @@
+{{ if not .siteContext.Taxonomies.authors }}
+
+{{ .author }}{{ if not .isLast }},{{ end }}
+
+{{ else }}
+
+{{ with .siteContext.GetPage (printf "/%s/%s" "authors" (.author | urlize)) }}
+<a title="{{ .Name }}" href="{{ .Permalink }}">@{{ $.author }}</a>{{ if not $.isLast }},{{ end }}
+{{ else }}
+{{ .author }}{{ if not .isLast }},{{ end }}
+{{ end }}
+
+{{ end }}

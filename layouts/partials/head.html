@@ -1,0 +1,19 @@
+<head>
+    {{ partial "meta.html" . }}
+
+    <link rel="canonical" href="{{ .Permalink }}" />
+    
+    {{ with .OutputFormats.Get "RSS" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+    {{ end }}
+    
+    {{ with .OutputFormats.Get "json" }}
+    <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
+    {{ end }}
+    
+    {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/vanilla-framework/scss")) }}
+    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{ partial "head-extension.html" . }}
+</head>

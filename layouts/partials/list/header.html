@@ -1,0 +1,23 @@
+{{ if .Data.Term }}
+
+<div class="p-strip page-banner">
+    <div class="row">
+        <h1>
+            <span class="u-capitalized">{{ i18n .Data.Singular | default .Data.Singular }}</span>:
+            {{ .Title }}
+        </h1>
+        {{ .Content }}
+    </div>
+</div>
+
+{{ else }}
+
+<div class="p-strip page-banner">
+    <div class="row u-vertically-center">
+        <div class="col-8">
+            <h1>{{ i18n (anchorize .Title) | default .Title | default $.Site.Title }}</h1>
+        </div>
+    </div>
+</div>
+
+{{ end }}
