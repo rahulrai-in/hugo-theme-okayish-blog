@@ -12,12 +12,12 @@
     "blog"
   ],
   "scripts": {
-    "watch-css": "node-sass --watch static/sass/main.scss static/css/style.css",
-    "build-css": "node-sass static/sass/main.scss static/css/style.css"
+    "watch-css": "node-sass --watch static/sass/main.scss static/css/style.css --source-map true",
+    "build-css": "node-sass static/sass/main.scss static/css/style.css --output-style compressed --source-map true"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build-css && git add static/css/style.css"
+      "pre-commit": "npm run build-css && git add static/css/style.css*"
     }
   },
   "author": "Divin Kong",

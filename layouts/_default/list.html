@@ -44,7 +44,7 @@
                 {{ end }}
 
                 {{ if .Truncated }}
-                <p><a href="{{ .Permalink }}">{{ i18n "readMore" }}</a></p>
+                <p><a href="{{ .Permalink }}">{{ i18n "readMore" | default "Read more" }}</a></p>
                 {{ end }}
             </div>
         </div>

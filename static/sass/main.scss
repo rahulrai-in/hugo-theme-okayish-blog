@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Hanuman:400,700|IBM+Plex+Serif:400,400i,700,700i|Inconsolata:400,700&display=swap&subset=khmer");
-$font-base-family: "'IBM Plex Serif', Hanuman, serif";
-$font-monospace: Inconsolata, monospace;
+$font-base-family: "Roboto, Hanuman, Ubuntu, Arial, 'libra sans', sans-serif";
+$font-monospace: 'Inconsolata, "Ubuntu Mono", Consolas, Monaco, Courier, monospace';
 $font-weight-bold: 700;
 
-@import "node_modules/vanilla-framework/scss/vanilla";
-@include vanilla;
+@import "node_modules/vanilla-framework/scss/build";
 
 @import "post-content";
 @import "custom";
