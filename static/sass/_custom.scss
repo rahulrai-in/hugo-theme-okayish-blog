@@ -1,80 +1,79 @@
-.p-link--logo, .title-logo {
-    color: #111 !important;
-    font-weight: bold;
-    text-decoration: none !important;
+.p-link--logo,
+.title-logo {
+  color: #111 !important;
+  font-weight: bold;
+  text-decoration: none !important;
 }
 
 .p-link--hashtag {
-    color: #666 !important;
+  color: #666 !important;
 }
 
 .p-inline-list-icons--share-links .p-inline-list__item {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .p-article-pagination__link--no-title {
-    &::before, &::after {
-        top:.8rem !important;
-    }
+  &::before,
+  &::after {
+    top: 0.8rem !important;
+  }
 }
 
 .u-inline {
-    display: inline;
+  display: inline;
 }
 
 .u-margin-bottom--small {
-    margin-bottom: 1.1rem;;
+  margin-bottom: 1.1rem;
 }
 
 .u-capitalized {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .u-unselectable {
-    user-select: none;
+  user-select: none;
 }
 
 .is-wrapper {
-    padding-top: 0;
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+p {
+  max-width: 100%;
 }
 
 .page-banner {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 
-    &__image {
-        height: 300px;
-        width: 300px;
-    }
-}
-
-.page-footer {
-    p {
-        max-width: 100%;
-    }
+  &__image {
+    height: 300px;
+    width: 300px;
+  }
 }
 
 .posts .row:first-child .col-12:first-child .p-card {
-    margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 // Instagram card styling
 .card {
-    @extend .p-card;
+  @extend .p-card;
 
-    .card-header {
-        @extend .p-heading--three;
-    }
+  .card-header {
+    @extend .p-heading--three;
+  }
 
-    .card-body {
-        padding-top: .5rem;
-    }
+  .card-body {
+    padding-top: 0.5rem;
+  }
 }
-
 
 @media screen and (min-width: 772px) {
   .col--share-links {
-      text-align: right;
+    text-align: right;
   }
 }
