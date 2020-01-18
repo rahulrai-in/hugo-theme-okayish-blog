@@ -11,9 +11,7 @@
     <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
     {{ end }}
     
-    {{ $options := (dict "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "node_modules/vanilla-framework/scss")) }}
-    {{ $style := resources.Get "sass/main.scss" | resources.ToCSS $options | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}">
+    <link rel="stylesheet" href='{{ "/css/style.css" | absURL }}'>
 
     {{ partial "head-extension.html" . }}
 </head>
