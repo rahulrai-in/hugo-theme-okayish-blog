@@ -1,9 +1,9 @@
-name = "Okayish Blog Theme"
+name = "Okayish Blog Hugo Theme"
 license = "MIT"
 licenselink = "https://github.com/kongdivin/hugo-theme-okayish-blog/blob/master/LICENSE"
-description = "A Vanilla-based Hugo theme for simple blogs"
+description = "An ok-ish blog theme based on Vanilla"
 homepage = "https://github.com/kongdivin/hugo-theme-okayish-blog#readme"
-tags = ["blog"]
+tags = ["blog", "responsive", "i18n"]
 features = ["responsive", "i18n"]
 min_version = "0.62.2"
 

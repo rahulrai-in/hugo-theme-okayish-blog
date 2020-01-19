@@ -1,7 +1,7 @@
 {
   "name": "hugo-theme-okayish-blog",
   "version": "1.0.0",
-  "description": "Ok-ish blog theme for Hugo",
+  "description": "An ok-ish blog theme for Hugo",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kongdivin/hugo-theme-okayish-blog.git"
