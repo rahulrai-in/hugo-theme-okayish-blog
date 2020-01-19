@@ -60,11 +60,15 @@ h6 {
 }
 
 .page-banner {
-  background-color: whitesmoke;
+  background-color: $color-light;
 
   &__image {
     height: 300px;
-    width: 300px;
+    width: 300px; 
+  }
+
+  a {
+    color: darken($color-link, 10%);
   }
 }
 
