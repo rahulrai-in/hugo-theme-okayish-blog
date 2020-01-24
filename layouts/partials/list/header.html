@@ -15,7 +15,8 @@
 <div class="p-strip page-banner">
     <div class="row u-vertically-center">
         <div class="col-8">
-            <h1>{{ i18n (anchorize .Title) | default .Title | default $.Site.Title }}</h1>
+            <h1>{{ .Title | default $.Site.Title }}</h1>
+            <p>{{ .Content | default $.Site.Params.Description }}</p>
         </div>
     </div>
 </div>
