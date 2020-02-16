@@ -18,4 +18,13 @@
         {{ partial "single/pagination.html" . }}
     </div>
 </footer>
+
+{{ if $.Site.DisqusShortname }}
+<div class="p-strip u-no-padding--bottom is-shallow">
+    <div class="row">
+        {{ template "_internal/disqus.html" . }}
+    </div>
+</div>
+{{ end }}
+
 {{ end }}

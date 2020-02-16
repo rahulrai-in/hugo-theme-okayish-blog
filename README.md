@@ -15,6 +15,7 @@ theme](https://raw.githubusercontent.com/kongdivin/hugo-theme-okayish-blog/maste
 * Google `site:` Search
 * Google Analytics
 * Share links (Facebook, Twitter, and LinkedIn)
+* Disqus Comments
 * Provide meta tags for [Open Graph](https://ogp.me/), [Twitter
     Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards),
     and [Schema.org](https://schema.org/)
@@ -68,6 +69,9 @@ theme = "hugo-theme-okayish-blog"
 
 # Provide this id to enable Google Analytics
 googleAnalytics = "UA-xxxxxxxxx-x"
+
+# Provide the shortname to enable Disqus comments
+disqusShortname = "ok-ish-blog"
 
 [params]
 # These will be used for OpenGraph, Twitter Card and Schema.org
