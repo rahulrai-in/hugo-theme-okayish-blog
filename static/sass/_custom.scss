@@ -64,7 +64,7 @@ h6 {
 
   &__image {
     height: 300px;
-    width: 300px; 
+    width: 300px;
   }
 
   a {
@@ -72,8 +72,14 @@ h6 {
   }
 }
 
-.posts .row:first-child .col-12:first-child .p-card {
-  margin-top: 1.5rem;
+.posts {
+  .row:first-child .col-12:first-child .p-card {
+    margin-top: 1.5rem;
+  }
+
+  .p-card h3 a {
+    color: $color-dark
+  }
 }
 
 // Instagram card styling
