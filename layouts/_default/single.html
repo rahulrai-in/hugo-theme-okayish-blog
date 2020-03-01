@@ -13,13 +13,15 @@
     </main>
 </section>
 
+{{ if .Section }}
 <footer class="p-strip is-wrapper">
     <div class="row">
         {{ partial "single/pagination.html" . }}
     </div>
 </footer>
+{{ end }}
 
-{{ if $.Site.DisqusShortname }}
+{{ if and $.Site.DisqusShortname (.Params.CommentsEnabled | default true) }}
 <div class="p-strip u-no-padding--bottom is-shallow">
     <div class="row">
         {{ template "_internal/disqus.html" . }}
