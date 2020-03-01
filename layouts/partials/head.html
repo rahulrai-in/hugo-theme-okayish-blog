@@ -9,7 +9,7 @@
     <link href="{{ .RelPermalink }}" rel="alternate" type="application/json" title="{{ $.Site.Title }}" />
     {{ end }}
     
-    <link rel="stylesheet" href='{{ "css/style.css" | absURL }}'>
+    <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
 
     {{ partial "head-extension.html" . }}
 </head>

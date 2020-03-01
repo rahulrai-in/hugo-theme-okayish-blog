@@ -150,7 +150,7 @@ to your stylesheet in that file. For example,
 ```html
 <!-- File: layouts/partials/head-extension.html -->
 
-<link href={{ "css/custom.css" | absURL }} rel="stylesheet"><link>
+<link href={{ "css/custom.css" | relURL }} rel="stylesheet"><link>
 
 <link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet"><link>
 ```
