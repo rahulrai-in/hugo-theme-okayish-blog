@@ -1,18 +1,20 @@
 <div class="p-article-pagination">
-    {{ if .PrevInSection }}
-    <a class="p-article-pagination__link--previous" href="{{ .PrevInSection.Permalink }}">
+    {{ $pagesInSection := (where .Site.RegularPages "Section" .Section) }}
+
+    {{ with $pagesInSection.Prev . }}
+    <a class="p-article-pagination__link--previous" href="{{ .Permalink }}">
         <span class="p-article-pagination__label">{{ i18n "previous" | default "Previous" }}</span>
         <span class="p-article-pagination__title">
-            {{ .PrevInSection.Title }}
+            {{ .Title }}
         </span>
     </a>
     {{ end }}
 
-    {{ if .NextInSection }}
-    <a class="p-article-pagination__link--next" href="{{ .NextInSection.Permalink }}">
+    {{ with $pagesInSection.Next . }}
+    <a class="p-article-pagination__link--next" href="{{ .Permalink }}">
         <span class="p-article-pagination__label">{{ i18n "next" | default "Next" }}</span>
         <span class="p-article-pagination__title">
-            {{ .NextInSection.Title }}
+            {{ .Title }}
         </span>
     </a>
     {{ end }}
