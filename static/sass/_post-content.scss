@@ -33,12 +33,12 @@
   }
 
   > hr {
-    margin-top: .75rem;
-    margin-bottom: 1.75rem;
+    margin-top: $sp-unit * 1.5;
+    margin-bottom: $sp-unit * 3.5;
   }
 
   > div {
-    @extend .u-margin-bottom--small;
+    margin-bottom: $sp-unit * 2.2;
   }
 
   .footnotes {

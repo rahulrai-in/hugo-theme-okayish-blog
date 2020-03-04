@@ -29,6 +29,6 @@
   "devDependencies": {
     "husky": "^4.2.3",
     "node-sass": "^4.13.1",
-    "vanilla-framework": "^2.7.1"
+    "vanilla-framework": "^2.8.0"
   }
 }
