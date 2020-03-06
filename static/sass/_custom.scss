@@ -1,3 +1,26 @@
+html {
+  font-weight: $font-weight-normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $font-weight-bold;
+}
+
+p,
+td,
+th,
+pre,
+code,
+samp,
+kbd {
+  font-weight: $font-weight-normal;
+}
+
 p {
   @extend .u-no-max-width;
 }
@@ -61,7 +84,7 @@ p {
   }
 
   .p-card h3 a {
-    color: $color-dark
+    color: $color-dark;
   }
 }
 
