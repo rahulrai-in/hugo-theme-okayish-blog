@@ -23,7 +23,7 @@
             <ul class="p-navigation__links" role="menu">
                 {{ range $.Site.Menus.main }}
                 <li class="p-navigation__link" role="menuitem">
-                    <a href="{{ .URL }}">{{ i18n .Identifier | default .Name }}</a>
+                    <a href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name }}</a>
                 </li>
                 {{ end }}
             </ul>
