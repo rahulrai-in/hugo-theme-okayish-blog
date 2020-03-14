@@ -20,10 +20,10 @@
                 <a href="#main-content">{{ i18n "jumpToMainContent" | default "Jump to main content" }}</a>
             </span>
 
-            <ul class="p-navigation__links" role="menu">
+            <ul class="p-navigation__items" role="menu">
                 {{ range $.Site.Menus.main }}
-                <li class="p-navigation__link" role="menuitem">
-                    <a href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name }}</a>
+                <li class="p-navigation__item" role="menuitem">
+                    <a class="p-navigation__link" href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name }}</a>
                 </li>
                 {{ end }}
             </ul>

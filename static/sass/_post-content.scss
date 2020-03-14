@@ -51,3 +51,19 @@
     @extend %sp--ph1;
   }
 }
+
+.p-aside {
+  @extend .u-sticky;
+}
+
+#TableOfContents {
+  @extend .p-table-of-contents__nav;
+
+  ul {
+    @extend .p-list;
+
+    li a {
+      @extend .p-table-of-contents__link;
+    }
+  }
+}
