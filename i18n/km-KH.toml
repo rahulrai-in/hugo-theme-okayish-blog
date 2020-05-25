@@ -13,6 +13,9 @@ other = "មុន"
 [next]
 other = "បន្ទាប់"
 
+[colon]
+other = "៖"
+
 # Terms
 
 [category]
