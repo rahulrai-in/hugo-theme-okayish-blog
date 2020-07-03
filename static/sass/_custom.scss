@@ -1,5 +1,43 @@
 html {
   font-weight: $font-weight-normal;
+  background-color: var(--bg);
+
+  --bg: #{$color-x-light};
+  --bg-panel: #{$color-x-light};
+  --bg-banner: #{$color-light};
+  --bg-search: #{$color-x-light};
+  --color-text: #{$color-dark};
+}
+
+html[data-theme='dark'] {
+  background-color: var(--bg);
+
+  --bg: #{$color-accent};
+  --bg-panel: #{$color-mid-dark};
+  --bg-banner: #{$color-dark};
+  --bg-search: #{$color-dark};
+  --color-text: #{$color-x-light};
+}
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--color-text);
+}
+
+.p-navigation {
+  background-color: var(--bg);
+}
+
+.p-navigation__link {
+  color: var(--color-text) !important;
 }
 
 h1,
@@ -27,9 +65,21 @@ p {
 
 .p-link--logo,
 .title-logo {
-  color: $color-dark !important;
+  color: var(--color-text) !important;
   font-weight: $font-weight-bold;
   text-decoration: none !important;
+}
+
+.p-search-box .p-search-box__input {
+  color: var(--color-text) !important;
+  background-color: var(--bg-search) !important;
+
+  &:active,
+  &:focus,
+  &:hover {
+    color: var(--color-text) !important;
+    background-color: var(--bg-search) !important;
+  }
 }
 
 .p-link--hashtag {
@@ -42,10 +92,15 @@ p {
 }
 
 .p-article-pagination__link--no-title {
+
   &::before,
   &::after {
     top: 0.8rem !important;
   }
+}
+
+.p-switch__slider {
+  margin: 0 !important;
 }
 
 .u-sticky {
@@ -71,7 +126,7 @@ p {
 }
 
 .page-banner {
-  background-color: $color-light;
+  background-color: var(--bg-banner);
 
   &__image {
     height: 300px;
@@ -84,8 +139,13 @@ p {
     margin-top: 1.5rem;
   }
 
+  .p-card {
+    background-color: var(--bg);
+    color: var(--color-text) !important;
+  }
+
   .p-card h3 a {
-    color: $color-dark;
+    color: var(--color-text);
   }
 }
 

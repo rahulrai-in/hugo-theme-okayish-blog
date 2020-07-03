@@ -12,6 +12,7 @@
     "blog"
   ],
   "scripts": {
+    "uglify": "uglifyjs --compress --mangle --output static/js/custom.js -- static/scripts/*.js",
     "watch-css": "node-sass --watch static/sass/main.scss static/css/style.css --source-map true",
     "build-css": "node-sass static/sass/main.scss static/css/style.css --output-style compressed --source-map true"
   },
@@ -29,6 +30,7 @@
   "devDependencies": {
     "husky": "^4.2.5",
     "node-sass": "^4.14.1",
+    "uglify-es": "^3.3.9",
     "vanilla-framework": "^2.13.0"
   }
 }
