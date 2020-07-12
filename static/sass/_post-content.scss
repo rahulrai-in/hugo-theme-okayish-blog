@@ -71,6 +71,10 @@
     }
   }
 
+  .footnote-return {
+    margin-left: 0.25rem;
+  }
+
   div {
     @extend %paragraph;
   }
