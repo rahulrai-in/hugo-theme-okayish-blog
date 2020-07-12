@@ -25,6 +25,13 @@ p {
   @extend .u-no-max-width;
 }
 
+code,
+samp,
+kbd {
+  background-color: $color-light;
+  box-shadow: 0 0 0 0.25rem $color-light;
+}
+
 .p-link--logo,
 .title-logo {
   color: $color-dark !important;
@@ -34,6 +41,7 @@ p {
 
 .p-link--hashtag {
   color: $color-mid-dark !important;
+  line-height: 30px;
 }
 
 .p-inline-list-icons--share-links .p-inline-list__item {
