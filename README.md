@@ -17,8 +17,8 @@ theme](https://raw.githubusercontent.com/kongdivin/hugo-theme-okayish-blog/maste
 * Share links (Facebook, Twitter, and LinkedIn)
 * Disqus Comments
 * Provide meta tags for [Open Graph](https://ogp.me/), [Twitter
-    Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards),
-    and [Schema.org](https://schema.org/)
+  Card](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards),
+  and [Schema.org](https://schema.org/)
 
 ## Getting Started
 
@@ -110,7 +110,7 @@ identifier = "categories"
 name = "Categories"
 url = "/categories"
 
-# For i18n support, add the language codes here 
+# For i18n support, add the language codes here
 # and provide translations in `i18n` folder. E.g., `i18n/en-US.toml`
 [languages]
 
@@ -150,21 +150,22 @@ to your stylesheet in that file. For example,
 ```html
 <!-- File: layouts/partials/head-extension.html -->
 
-<link href={{ "css/custom.css" | relURL }} rel="stylesheet"><link>
-
-<link href="https://fonts.googleapis.com/css?family=Hanuman:400,700|Inconsolata|Roboto:400,400i,700,700i&display=swap&subset=khmer" rel="stylesheet"><link>
+<link href={{ "css/custom.css" | relURL }} rel="stylesheet"><link />
 ```
-
-N.B. The theme includes fonts here. You might want to copy the `<link>` over;
-otherwise, the fonts will be default to Vanilla's default fonts ([Ubuntu
-font](https://design.ubuntu.com/font/)).
 
 ## Contributing
 
 If you spot any bugs, please use [Issue
-Tracker](https://github.com/kongdivin/hugo-theme-okayish-blog/issues). Or if you
-want to add a new feature directly, please create a new [Pull
+Tracker](https://github.com/kongdivin/hugo-theme-okayish-blog/issues).
+Or if you want to add a new feature directly, please create a new [Pull
 Request](https://github.com/kongdivin/hugo-theme-okayish-blog/pulls).
+
+## Okayish Blog Theme Users
+
+I would love to see how you use the theme and what you're writing about.
+If you want to share it, kindly add your blog to the
+[list](https://github.com/kongdivin/hugo-theme-okayish-blog/blob/master/USERS.md).
+Thank you!
 
 ## License
 
