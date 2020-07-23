@@ -2,7 +2,7 @@
     {{ $pagesInSection := (where .Site.RegularPages "Section" .Section) }}
 
     {{ with $pagesInSection.Prev . }}
-    <a class="p-article-pagination__link--previous" href="{{ .Permalink }}">
+    <a class="p-article-pagination__link--previous" href="{{ .Permalink }}" aria-label="Previous Post">
         <span class="p-article-pagination__label">{{ i18n "previous" | default "Previous" }}</span>
         <span class="p-article-pagination__title">
             {{ .Title }}
@@ -11,7 +11,7 @@
     {{ end }}
 
     {{ with $pagesInSection.Next . }}
-    <a class="p-article-pagination__link--next" href="{{ .Permalink }}">
+    <a class="p-article-pagination__link--next" href="{{ .Permalink }}" aria-label="Next Post">
         <span class="p-article-pagination__label">{{ i18n "next" | default "Next" }}</span>
         <span class="p-article-pagination__title">
             {{ .Title }}

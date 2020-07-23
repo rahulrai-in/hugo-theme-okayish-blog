@@ -1,12 +1,14 @@
 <footer class="p-article-pagination">
     {{ if .Paginator.HasPrev }}
-    <a class="p-article-pagination__link--previous p-article-pagination__link--no-title" href="{{ .Paginator.Prev.URL }}">
+    <a class="p-article-pagination__link--previous p-article-pagination__link--no-title"
+        href="{{ .Paginator.Prev.URL }}" aria-label="Previous Page">
         <span class="p-article-pagination__label">{{ i18n "previous" | default "Previous" }}</span>
     </a>
     {{end}}
 
     {{ if .Paginator.HasNext }}
-    <a class="p-article-pagination__link--next p-article-pagination__link--no-title" href="{{ .Paginator.Next.URL }}">
+    <a class="p-article-pagination__link--next p-article-pagination__link--no-title" href="{{ .Paginator.Next.URL }}"
+        aria-label="Next Page">
         <span class="p-article-pagination__label">{{ i18n "next" | default "Next" }}</span>
     </a>
     {{end}}

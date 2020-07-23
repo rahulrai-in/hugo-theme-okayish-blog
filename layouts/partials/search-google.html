@@ -1,7 +1,7 @@
 <form class="p-search-box" action="https://www.google.com/search" target="_blank">
     <input type="search" class="p-search-box__input" name="q" placeholder='{{ i18n "search" | default "Search" }}'
         required="" aria-label="Query">
-    <input type="hidden" name="sitesearch" value="{{ $.Site.Home.Permalink }}">
+    <input type="hidden" name="sitesearch" value="{{ $.Site.BaseURL }}">
     <button type="reset" class="p-search-box__reset" alt="reset" aria-label="Reset">
         <i class="p-icon--close"></i>
     </button>

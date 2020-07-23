@@ -6,11 +6,11 @@
                     {{ $.Site.Title }}
                 </a>
             </div>
-            
-            <a href="#navigation" class="p-navigation__toggle--open" title="menu">
+
+            <a href="#navigation" class="p-navigation__toggle--open" title="Menu" aria-label="Open Menu">
                 <i class="p-icon--menu"></i>
             </a>
-            <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">
+            <a href="#navigation-closed" class="p-navigation__toggle--close" title="Close Menu" aria-label="Close Menu">
                 <i class="p-icon--close"></i>
             </a>
         </div>
@@ -29,7 +29,8 @@
                 </li>
                 {{ range $.Site.Menus.main }}
                 <li class="p-navigation__item" role="menuitem">
-                    <a class="p-navigation__link" href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name }}</a>
+                    <a class="p-navigation__link"
+                        href="{{ .URL | absLangURL }}">{{ i18n .Identifier | default .Name }}</a>
                 </li>
                 {{ end }}
             </ul>
