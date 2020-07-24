@@ -19,14 +19,7 @@
             <span class="u-off-screen">
                 <a href="#main-content">{{ i18n "jumpToMainContent" | default "Jump to main content" }}</a>
             </span>
-            
             <ul class="p-navigation__items" role="menu">
-                <li class="p-navigation__item" role="menuitem">
-                <label class="p-navigation__link">
-                    <input type="checkbox" class="p-switch" name="theme">
-                    <div class="p-switch__slider"></div>
-                </label>
-                </li>
                 {{ range $.Site.Menus.main }}
                 <li class="p-navigation__item" role="menuitem">
                     <a class="p-navigation__link"
@@ -38,7 +31,7 @@
             {{ if $.Site.Params.searchGoogleEnabled | default true }}
             {{ partial "search-google.html" . }}
             {{ end }}
-            
+            <dark-mode-toggle permanent appearance="toggle"></dark-mode-toggle>
         </nav>
     </div>
 </header>

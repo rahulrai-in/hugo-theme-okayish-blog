@@ -10,8 +10,7 @@
     {{ end }}
     
     <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
-
-    <script defer src='{{ "js/custom.js" | relURL }}'></script>
+    <script defer type="module" src='{{ "js/main.min.mjs" | relURL }}'></script>
 
     {{ partial "head-extension.html" . }}
 </head>

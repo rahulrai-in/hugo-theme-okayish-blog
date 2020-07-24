@@ -1,5 +1,8 @@
 "use strict";
 
+const toggle = document.querySelector("dark-mode-toggle");
+const body = document.body;
+
 let trans = () => {
   document.documentElement.classList.add("transition");
   window.setTimeout(() => {
@@ -8,8 +11,10 @@ let trans = () => {
 };
 
 let switchMode = (isDark) => {
-  //   Special case for share icon that requires additional class.
-  let icons = document.querySelectorAll("i[class^='p-icon--']");
+  //   Light up share icons that requires additional class except search box that is always white.
+  let icons = document.querySelectorAll(
+    "i[class^='p-icon--']:not([data-toggle-behavior='invariant'])"
+  );
   for (let icon of Array.from(icons)) {
     if (isDark) {
       icon.classList.add("is-light");
@@ -19,23 +24,41 @@ let switchMode = (isDark) => {
   }
 };
 
-window.onload = function () {
-  let savedMode = localStorage.getItem("color-scheme") || "light";
-  document.documentElement.setAttribute("data-theme", savedMode);
-  var checkbox = document.querySelector("input[name=theme]");
-  checkbox.checked = savedMode !== "light";
-  switchMode(savedMode !== "light");
-  checkbox.addEventListener("change", function () {
-    if (this.checked) {
-      trans();
-      switchMode(true);
-      document.documentElement.setAttribute("data-theme", "dark");
-      localStorage.setItem("color-scheme", "dark");
-    } else {
-      trans();
-      switchMode(false);
-      document.documentElement.setAttribute("data-theme", "light");
-      localStorage.setItem("color-scheme", "light");
-    }
-  });
+let darkMode = (shouldTransition) => {
+  if (shouldTransition) {
+    trans();
+  }
+  switchMode(true);
+  document.documentElement.setAttribute("data-theme", "dark");
+  localStorage.setItem("color-scheme", "dark");
 };
+
+let lightMode = (shouldTransition) => {
+  if (shouldTransition) {
+    trans();
+  }
+  switchMode(false);
+  document.documentElement.setAttribute("data-theme", "light");
+  localStorage.setItem("color-scheme", "light");
+};
+
+let isStorageAvailable = () => {
+  // Default to light mode in in-cognito instances because localstorage is not available
+  try {
+    let x = "__storage_test__";
+    localStorage.setItem(x, x);
+    localStorage.removeItem(x);
+    return true;
+  } catch (e) {
+    return false;
+  }
+};
+
+if (isStorageAvailable()) {
+  toggle.mode === "dark" ? darkMode(false) : lightMode(false);
+  toggle.addEventListener("colorschemechange", () => {
+    toggle.mode === "dark" ? darkMode(true) : lightMode(true);
+  });
+} else {
+  toggle.remove();
+}

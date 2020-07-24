@@ -7,16 +7,22 @@ html {
   --bg-banner: #{$color-light};
   --bg-search: #{$color-x-light};
   --color-text: #{$color-dark};
+  --code-bg: #{$color-light};
+  --hashtag: #{$color-mid-dark};
+  --color-anchor: inherit;
 }
 
 html[data-theme='dark'] {
   background-color: var(--bg);
 
   --bg: #{$color-accent};
-  --bg-panel: #{$color-mid-dark};
-  --bg-banner: #{$color-dark};
+  --bg-panel: #1F1B24;
+  --bg-banner: #1F1B24;
   --bg-search: #{$color-dark};
   --color-text: #{$color-x-light};
+  --code-bg: #{$color-dark};
+  --hashtag: #{$color-link};
+  --color-anchor: #{$color-caution};
 }
 
 html.transition,
@@ -32,12 +38,20 @@ body {
   color: var(--color-text);
 }
 
+.p-navigation .p-search-box {
+  order: 0;
+}
+
 .p-navigation {
   background-color: var(--bg);
 }
 
 .p-navigation__link {
   color: var(--color-text) !important;
+}
+
+a {
+  color: var(--color-anchor) !important;
 }
 
 h1,
@@ -59,6 +73,11 @@ kbd {
   font-weight: $font-weight-normal;
 }
 
+th {
+  color: var(--color-text) !important;
+  border-bottom: 1px solid var(--color-text);
+}
+
 p {
   @extend .u-no-max-width;
 }
@@ -66,8 +85,8 @@ p {
 code,
 samp,
 kbd {
-  background-color: $color-light;
-  box-shadow: 0 0 0 0.25rem $color-light;
+  background-color: var(--code-bg);
+  box-shadow: 0 0 0 0.1rem $color-light;
 }
 
 .p-link--logo,
@@ -77,20 +96,8 @@ kbd {
   text-decoration: none !important;
 }
 
-.p-search-box .p-search-box__input {
-  color: var(--color-text) !important;
-  background-color: var(--bg-search) !important;
-
-  &:active,
-  &:focus,
-  &:hover {
-    color: var(--color-text) !important;
-    background-color: var(--bg-search) !important;
-  }
-}
-
 .p-link--hashtag {
-  color: $color-mid-dark !important;
+  color: var(--color-anchor) !important;
   line-height: 30px;
 }
 
@@ -148,7 +155,7 @@ kbd {
   }
 
   .p-card {
-    background-color: var(--bg);
+    background-color: var(--bg-panel);
     color: var(--color-text) !important;
   }
 
@@ -174,4 +181,12 @@ kbd {
   .col--share-links {
     text-align: right;
   }
+}
+
+// Dark mode icon
+dark-mode-toggle {
+  --dark-mode-toggle-light-icon: url(/css/img/moon.svg);
+  --dark-mode-toggle-dark-icon: url(/css/img/sun.svg);
+  --dark-mode-toggle-icon-filter: invert(80%);
+  --dark-mode-toggle-icon-size: 1.2rem;
 }
