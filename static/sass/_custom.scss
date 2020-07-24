@@ -9,8 +9,6 @@ html {
   --color-text: #{$color-dark};
   --code-bg: #{$color-light};
   --hashtag: #{$color-mid-dark};
-  --color-anchor: inherit;
-  --paginator-text: inherit;
 }
 
 html[data-theme='dark'] {
@@ -22,9 +20,18 @@ html[data-theme='dark'] {
   --bg-search: #{$color-dark};
   --color-text: #{$color-x-light};
   --code-bg: #{$color-dark};
-  --hashtag: #{$color-link};
-  --color-anchor: #{$color-caution};
-  --paginator-text: #{$color-x-light};
+  --hashtag: #{$color-caution};
+
+  a {
+    color: $color-caution !important;
+  }
+
+  .p-article-pagination__label,
+  .p-article-pagination__title,
+  .p-article-pagination__link--previous::before,
+  .p-article-pagination__link--next::after {
+    color: $color-x-light;
+  }
 }
 
 html.transition,
@@ -50,10 +57,6 @@ body {
 
 .p-navigation__link {
   color: var(--color-text) !important;
-}
-
-a {
-  color: var(--color-anchor) !important;
 }
 
 blockquote {
@@ -104,7 +107,7 @@ kbd {
 }
 
 .p-link--hashtag {
-  color: var(--color-anchor) !important;
+  color: var(--hashtag) !important;
   line-height: 30px;
 }
 
@@ -119,13 +122,6 @@ kbd {
   &::after {
     top: 0.8rem !important;
   }
-}
-
-.p-article-pagination__label,
-.p-article-pagination__title,
-.p-article-pagination__link--previous::before,
-.p-article-pagination__link--next::after {
-  color: var(--paginator-text);
 }
 
 .p-article-pagination__link:hover,
