@@ -30,7 +30,6 @@ let darkMode = (shouldTransition) => {
   }
   switchMode(true);
   document.documentElement.setAttribute("data-theme", "dark");
-  localStorage.setItem("color-scheme", "dark");
 };
 
 let lightMode = (shouldTransition) => {
@@ -39,7 +38,6 @@ let lightMode = (shouldTransition) => {
   }
   switchMode(false);
   document.documentElement.setAttribute("data-theme", "light");
-  localStorage.setItem("color-scheme", "light");
 };
 
 let isStorageAvailable = () => {
