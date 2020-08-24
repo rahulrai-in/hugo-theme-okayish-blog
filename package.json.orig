@@ -1,0 +1,41 @@
+{
+  "name": "hugo-theme-okayish-blog",
+  "version": "1.0.0",
+  "description": "An ok-ish blog theme for Hugo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kongdivin/hugo-theme-okayish-blog.git"
+  },
+  "keywords": [
+    "theme",
+    "hugo",
+    "blog"
+  ],
+  "scripts": {
+    "uglify": "uglifyjs --compress --mangle --output static/js/main.min.mjs -- node_modules/dark-mode-toggle/dist/dark-mode-toggle.min.mjs static/scripts/*.js",
+    "watch-css": "node-sass --watch static/sass/main.scss static/css/style.css --source-map true",
+    "build-css": "node-sass static/sass/main.scss static/css/style.css --output-style compressed --source-map true"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build-css && git add static/css/style.css*"
+    }
+  },
+  "author": "Divin Kong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kongdivin/hugo-theme-okayish-blog/issues"
+  },
+  "homepage": "https://github.com/kongdivin/hugo-theme-okayish-blog#readme",
+  "devDependencies": {
+    "dark-mode-toggle": "^0.7.2",
+    "husky": "^4.2.5",
+    "node-sass": "^4.14.1",
+<<<<<<< HEAD
+    "uglify-es": "^3.3.9",
+    "vanilla-framework": "^2.14.1"
+=======
+    "vanilla-framework": "^2.16.0"
+>>>>>>> upstream/master
+  }
+}
