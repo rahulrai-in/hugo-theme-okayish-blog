@@ -23,7 +23,7 @@ html[data-theme='dark'] {
   --hashtag: #{$color-caution};
 
   a {
-    color: $color-caution;
+    color: $color-caution !important;
   }
 
   .p-article-pagination__label,
