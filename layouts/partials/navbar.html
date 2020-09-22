@@ -31,7 +31,7 @@
             {{ if $.Site.Params.searchGoogleEnabled | default true }}
             {{ partial "search-google.html" . }}
             {{ end }}
-            <dark-mode-toggle permanent appearance="toggle"></dark-mode-toggle>
+            <dark-mode-toggle mode="dark" permanent appearance="toggle"></dark-mode-toggle>
         </nav>
     </div>
 </header>
