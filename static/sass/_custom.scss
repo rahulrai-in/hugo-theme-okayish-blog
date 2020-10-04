@@ -152,8 +152,7 @@ kbd {
 }
 
 .is-wrapper {
-  padding-top: 0;
-  padding-bottom: 0;
+  padding: 0 !important;
 }
 
 .page-banner {
@@ -169,14 +168,31 @@ kbd {
   .row:first-child .col-12:first-child .p-card {
     margin-top: 1.5rem;
   }
+}
 
-  .p-card {
-    background-color: var(--bg-panel);
-    color: var(--color-text) !important;
+.posts--snazzy {
+  .row:first-child {
+    .col-12:first-child .p-card {
+      margin-top: 1.5rem;
+    }
   }
 
-  .p-card h3 a {
-    color: var(--color-text);
+  .p-card {
+    @extend %section-padding--default;
+    overflow: visible;
+    padding-top: calc(1rem - 1px);
+    padding-bottom: calc(1rem - 1px);
+    background-color: var(--bg-panel);
+    color: var(--color-text) !important;
+
+    @media only print {
+      border: 0;
+      background-color: var(--bg);
+    }
+
+    .p-heading--3 a {
+      color: var(--color-text);
+    }
   }
 }
 
@@ -185,7 +201,7 @@ kbd {
   @extend .p-card;
 
   .card-header {
-    @extend .p-heading--three;
+    @extend .p-heading--3;
   }
 
   .card-body {
@@ -193,7 +209,7 @@ kbd {
   }
 }
 
-@media screen and (min-width: 772px) {
+@media (min-width: $breakpoint-medium) {
   .col--share-links {
     text-align: right;
   }
