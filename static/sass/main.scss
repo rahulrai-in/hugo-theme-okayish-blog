@@ -2,6 +2,8 @@ $font-weight-normal: 400;
 $font-weight-bold: 700;
 $font-base-family: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol","Noto Color Emoji"';
 $font-monospace: '"SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace';
+// RR: Added to avoid overlap in my menu
+$breakpoint-navigation-threshold: 900px !default;
 
 @import "node_modules/vanilla-framework/scss/build";
 @import "post-content";
