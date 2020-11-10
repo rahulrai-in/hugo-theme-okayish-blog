@@ -34,14 +34,6 @@ html[data-theme='dark'] {
   }
 }
 
-html.transition,
-html.transition *,
-html.transition *:before,
-html.transition *:after {
-  transition: all 750ms !important;
-  transition-delay: 0 !important;
-}
-
 body {
   background-color: var(--bg);
   color: var(--color-text);
